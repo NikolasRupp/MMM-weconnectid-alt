@@ -1,12 +1,19 @@
-import json
-import random
-import re
-import requests
-import string
-from sys import argv
-from datetime import datetime, timezone
-import time
-
+try:
+  import json
+  import random
+  import re
+  import requests
+  import string
+  from sys import argv
+  from datetime import datetime, timezone
+  import time
+except ModuleNotFoundError as e:
+  output = {
+    "status": 0,
+    "error": str(e).replace("'","") + '. Please install it via Pip',
+  }
+  print(output)
+  exit()
 
 BASE_URL = 'https://mobileapi.apps.emea.vwapps.io'
 
@@ -193,7 +200,7 @@ try:
 except Exception as e:
   output = {
     "status": 0,
-    "error": "Error",
+    "error": str(e).replace("'",""),
   }
   print(output)
   exit()

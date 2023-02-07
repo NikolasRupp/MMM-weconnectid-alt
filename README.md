@@ -51,7 +51,7 @@ sudo make altinstall
 
 ```
 cd ~/MagicMirror/modules
-git clone https://github.com/NikolasRupp/MMM-weconnectid.git
+git clone https://github.com/NikolasRupp/MMM-weconnectid-alt.git
 ```
 
 - Now just add the module to your config.js file ([config entries](#configuration)).
